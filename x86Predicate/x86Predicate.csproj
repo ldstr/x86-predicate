@@ -8,6 +8,7 @@
     <StartupObject>x86Predicate.Program</StartupObject>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
