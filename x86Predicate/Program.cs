@@ -22,6 +22,19 @@ internal class Program
         }
 
         var module = ModuleDefMD.Load(src);
+        MethodDefExt.OriginalMD = module;
+
+        foreach (var type in module.GetTypes())
+        {
+            if (!type.HasMethods)
+                continue;
+
+            foreach (var method in type.Methods)
+            {
+                if (!method.IsNative)
+                    continue;
+            }
+        }
 
         Save(src, module);
         Exit();
