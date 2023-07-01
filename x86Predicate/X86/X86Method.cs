@@ -68,27 +68,35 @@ internal class X86Method
             case "mov":
                 Instructions.Add(new X86Mov(inst));
                 break;
+
             case "add":
                 Instructions.Add(new X86Add(inst));
                 break;
+
             case "sub":
                 Instructions.Add(new X86Sub(inst));
                 break;
+
             case "imul":
                 Instructions.Add(new X86IMul(inst));
                 break;
+
             case "div":
                 Instructions.Add(new X86Div(inst));
                 break;
+
             case "neg":
                 Instructions.Add(new X86Neg(inst));
                 break;
+
             case "not":
                 Instructions.Add(new X86Not(inst));
                 break;
+
             case "xor":
                 Instructions.Add(new X86Xor(inst));
                 break;
+
             case "pop":
                 Instructions.Add(new X86Pop(inst));
                 break;

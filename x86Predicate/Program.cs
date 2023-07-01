@@ -1,5 +1,5 @@
-﻿using dnlib.DotNet.Writer;
-using dnlib.DotNet;
+﻿using dnlib.DotNet;
+using dnlib.DotNet.Writer;
 
 namespace x86Predicate;
 
@@ -41,7 +41,11 @@ internal class Program
                     );
 
                 method.ImplAttributes = MethodImplAttributes.IL;
-                method.Attributes = MethodAttributes.FamANDAssem | MethodAttributes.Family | MethodAttributes.Static | MethodAttributes.HideBySig;
+                method.Attributes =
+                    MethodAttributes.FamANDAssem |
+                    MethodAttributes.Family |
+                    MethodAttributes.Static |
+                    MethodAttributes.HideBySig;
                 method.Body = decrypted.Body;
             }
         }

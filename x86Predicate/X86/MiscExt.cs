@@ -1,5 +1,5 @@
-﻿using SharpDisasm.Udis86;
-using SharpDisasm;
+﻿using SharpDisasm;
+using SharpDisasm.Udis86;
 using x86Predicate.X86.Types;
 
 namespace x86Predicate.X86;

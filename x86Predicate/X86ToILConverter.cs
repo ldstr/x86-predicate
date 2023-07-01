@@ -1,7 +1,7 @@
-﻿using dnlib.DotNet.Emit;
-using dnlib.DotNet;
-using x86Predicate.X86.Types;
+﻿using dnlib.DotNet;
+using dnlib.DotNet.Emit;
 using x86Predicate.X86;
+using x86Predicate.X86.Types;
 
 namespace x86Predicate;
 
@@ -29,7 +29,6 @@ internal class X86ToILConverter
         var returnMethodBody = returnMethod.Body;
 
         returnMethodBody.Instructions.Add(new Instruction(OpCodes.Ldarg_0));
-
 
         foreach (var x86Inst in methodToConvert.Instructions)
         {
