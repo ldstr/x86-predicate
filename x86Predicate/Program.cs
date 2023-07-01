@@ -34,4 +34,16 @@ internal class Program
 
         Console.WriteLine("Saved!");
     }
+
+    private static void Exit(string? msg = null)
+    {
+        Console.WriteLine();
+
+        if (!string.IsNullOrEmpty(msg))
+            Console.WriteLine(msg);
+
+        Console.WriteLine("Press any key to exit...");
+        Console.ReadKey(true);
+        Environment.Exit();
+    }
 }
