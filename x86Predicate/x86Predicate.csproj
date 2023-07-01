@@ -18,4 +18,8 @@
     <DebugType>embedded</DebugType>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="dnlib" Version="3.6.0" />
+  </ItemGroup>
+
 </Project>
