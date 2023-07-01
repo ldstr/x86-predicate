@@ -62,6 +62,6 @@ internal class Program
 
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey(true);
-        Environment.Exit();
+        Environment.Exit(0);
     }
 }
