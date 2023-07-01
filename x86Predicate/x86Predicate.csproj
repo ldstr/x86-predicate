@@ -22,4 +22,8 @@
     <PackageReference Include="dnlib" Version="3.6.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="X86\Instructions\" />
+  </ItemGroup>
+
 </Project>
