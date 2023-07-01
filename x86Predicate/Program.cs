@@ -33,6 +33,16 @@ internal class Program
             {
                 if (!method.IsNative)
                     continue;
+
+                Console.WriteLine("0x{0:X2}", method.MDToken.Raw);
+
+                var decrypted = X86ToILConverter.CreateILFromX86Method(
+                    new(method)
+                    );
+
+                method.ImplAttributes = MethodImplAttributes.IL;
+                method.Attributes = MethodAttributes.FamANDAssem | MethodAttributes.Family | MethodAttributes.Static | MethodAttributes.HideBySig;
+                method.Body = decrypted.Body;
             }
         }
 
