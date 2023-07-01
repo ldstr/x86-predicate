@@ -5,8 +5,26 @@ namespace x86Predicate;
 
 internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
+        if (args.Length == 0)
+        {
+            Exit("Usage: x86Predicate <PATH>");
+            return;
+        }
+
+        var src = args[0];
+
+        if (File.Exists(src))
+        {
+            Exit("File not found!");
+            return;
+        }
+
+        var module = ModuleDefMD.Load(src);
+
+        Save(src, module);
+        Exit();
     }
 
     private static void Save(
@@ -14,7 +32,7 @@ internal class Program
         ModuleDefMD module
         )
     {
-        Console.WriteLine("saving module...");
+        Console.WriteLine("Saving...");
 
         var writer = new NativeModuleWriterOptions(module, true)
         {
