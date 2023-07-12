@@ -7,7 +7,7 @@ namespace x86Predicate;
 
 internal class X86ToILConverter
 {
-    public static MethodDef CreateILFromX86Method(X86Method methodToConvert)
+    public static MethodDef ILFromX86Method(X86Method methodToConvert)
     {
         var int32Type = methodToConvert.OriginalMethod.ReturnType;
         var name = new UTF8String(methodToConvert.OriginalMethod.Name + "_IL");

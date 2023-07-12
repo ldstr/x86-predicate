@@ -31,7 +31,7 @@ foreach (var type in module.GetTypes())
 
         Console.WriteLine($"0x{method.MDToken.Raw:X2}");
 
-        var decrypted = X86ToILConverter.CreateILFromX86Method(
+        var decrypted = X86ToILConverter.ILFromX86Method(
             new(method)
             );
 
