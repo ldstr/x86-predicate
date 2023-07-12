@@ -31,7 +31,7 @@ internal class Program
 
             foreach (var method in type.Methods)
             {
-                if (!method.IsNative)
+                if (method.IsNative)
                     continue;
 
                 Console.WriteLine("0x{0:X2}", method.MDToken.Raw);
@@ -41,6 +41,7 @@ internal class Program
                     );
 
                 method.ImplAttributes = MethodImplAttributes.IL;
+                
                 method.Attributes =
                     MethodAttributes.FamANDAssem |
                     MethodAttributes.Family |
