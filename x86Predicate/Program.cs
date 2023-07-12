@@ -15,7 +15,7 @@ internal class Program
 
         var src = args[0];
 
-        if (File.Exists(src))
+        if (!File.Exists(src))
         {
             Exit("File not found!");
             return;
